@@ -1,20 +1,30 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Letsplay - Acceuil{% endblock %}
 
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>/Users/gabin/Projets/letsplayV2/src/Controller/HomeController.php</code></li>
-        <li>Your template at <code>/Users/gabin/Projets/letsplayV2/templates/home/index.html.twig</code></li>
-    </ul>
-</div>
+{% block stylesheets %}
+    <style>
+        .mainContainer {
+            width: 100%;
+            margin-left: 5%;
+        }
+        .text-h1{
+            color: white;
+            font-size: xxx-large;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+    </style>
 {% endblock %}
+{% block body %}
+
+    {% include 'components/header.html.twig' %}
+
+    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 1440 290"><path fill="#ffffff" fill-opacity="1" d="M0,160L60,154.7C120,149,240,139,360,154.7C480,171,600,213,720,224C840,235,960,213,1080,213.3C1200,213,1320,235,1380,245.3L1440,256L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
+    <div class="mainContainer">
+        <h1 class="text-h1">Rejoignez l'aventure</h1>
+    </div>
+
+{% endblock %}
+
+
